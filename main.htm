@@ -1,0 +1,79 @@
+<html>
+<link rel="stylesheet" href="style.css">
+
+<body class="scissors">
+    <div class="envelop">
+        <div class="envelop__front-paper"></div>
+        <div class="envelop__back-paper"></div>
+        <div class="envelop__up-paper js-up-paper"></div>
+        <div class="envelop__sticker js-sticker"></div>
+        <div class="envelop__false-sticker"></div>
+        <div class="envelop__content js-envelop-content">
+            <div class="love-notes">
+                <div class="note js-note">
+                    <div class="note__text">
+                        <p>वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ।
+                            निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥
+                        </p>
+                        <p>
+                        <h2 id="welcomeMessage">Welcome, Guest!</h2>
+                        </p>
+
+                        <p>
+                            हमें आपको अपनी बहन के विवाह समारोह में आमंत्रित करते हुए खुशी हो रही है...
+                        </p>
+                    </div>
+                </div>
+                <div class="note js-note">
+                    <div class="note__text">
+                        <p>
+                        <p>
+                            आयुष्मति आस्था वर्मा <br>पुत्री :- <br> श्रीमती कुमारी रीता एवं श्री नवीन कुमार वर्मा। <br>
+                            चिरंजीवी शौरभ<br> पुत्र :- <br> श्रीमती बिंदी माला सिंह और <br>श्री वीरसेन कुमार सिंह</p>
+                        </p>
+                    </div>
+                </div>
+                <div class="note js-note">
+                    <div class="note__text">
+                        <p> स्थान की जानकारी:-
+                            रामलखन प्रसाद भवन<br>
+                            गांव:-जोलहबीघा<br>
+                            जिला:-जहानाबाद<br></p>
+                        <hr>
+                        <p>
+                            दिनांक:- <br>
+                            तिलक:- 9 जुलाई 2024<br>
+                            मंडप :- 10 जुलाई 2024<br>
+                            हल्दी :- 10 जुलाई 2024<br>
+                            शादी:- 11 जुलाई 2024
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script>
+        // Get the name from the URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+
+        // Update the welcome message with the name
+        if (name) {
+            document.getElementById('welcomeMessage').textContent = 'Welcome, ' + name + '!';
+        }
+        // download the page as a pdf form
+        window.onload = function () {
+            document.getElementById("download")
+                .addEventListener("click", () => {
+                    const invite = this.document.getElementById("invite");
+                    console.log(invite);
+                    console.log(window);
+                    html2pdf().from(invite).save();
+                })
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+</body>
+
+</html>

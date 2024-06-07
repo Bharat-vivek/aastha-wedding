@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 20px;
+    padding: 0;
+    background-image: radial-gradient(circle, #beeb59, #00df96, #00c5e4, #009fff, #5765ea);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 20px;
+    box-shadow: 17px 13px 25px 7px rgba(0, 0, 0, 0.75);
+    background: rgba(255, 255, 255, 0.09);
+    border-radius: 16px;
+    backdrop-filter: blur(5.8px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: #f80c0c;
+}
+
+form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+input[type="text"],
+input[type="submit"] {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+label {
+    color: rgb(17, 18, 17);
+}
+
+button {
+    margin-top: 10px;
+    border-radius: 16px;
+    color: rgb(255, 0, 0);
+}
+
+button:hover {
+    background-color: wheat;
+    color: black;
+    cursor: pointer;
+}
+
+
+/* for the animation part of the headder */
+.typing-animation {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    /* border-right: .15em solid orange; */
+    /* Adjust color and thickness */
+    margin: 0;
+    padding: 0;
+    animation: typing 30s steps(2000) infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+
+    }
+
+    to {
+        width: 100%;
+
+    }
+}
+
+span {
+    color: magenta;
+}
+
+#any {
+    width: 100px;
+    border: 1 px solid black;
+}
